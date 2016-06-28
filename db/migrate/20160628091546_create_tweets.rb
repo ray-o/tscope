@@ -9,7 +9,7 @@ class CreateTweets < ActiveRecord::Migration
       t.string :tweet_id
       t.datetime :tweet_created_at
       t.references :keyword
-      t.timestamps null: false
+      t.timestamps
     end
   end
 end
