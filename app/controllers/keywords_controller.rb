@@ -29,7 +29,7 @@ class KeywordsController < ApplicationController
 
     respond_to do |format|
       if @keyword.save
-        Keyword.grab_all_tweets
+        @keyword.grab_tweets
         format.html { redirect_to @keyword, notice: 'Keyword was successfully created.' }
         format.json { render :show, status: :created, location: @keyword }
       else
