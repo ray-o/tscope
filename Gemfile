@@ -11,6 +11,7 @@ gem 'twitter', '~> 5.16'
 gem 'newrelic_rpm'
 gem 'unicorn'
 gem 'rack-timeout'
+gem 'will_paginate'
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'
 # Use Uglifier as compressor for JavaScript assets
