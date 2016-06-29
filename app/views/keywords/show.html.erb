@@ -12,7 +12,9 @@
   <%end%>
 </ul>
 
-<%will_paginate @twitts%>
+<div>
+  <%will_paginate @twitts%>
+</div>
 
 <%= link_to 'Edit', edit_keyword_path(@keyword) %> |
 <%= link_to 'Back', keywords_path %>
