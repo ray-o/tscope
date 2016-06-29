@@ -9,6 +9,8 @@ gem 'rails', '4.2.6'
 gem 'pg'
 gem 'twitter', '~> 5.16'
 gem 'newrelic_rpm'
+gem 'unicorn'
+gem 'rack-timeout'
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'
 # Use Uglifier as compressor for JavaScript assets
