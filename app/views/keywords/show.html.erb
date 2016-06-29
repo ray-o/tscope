@@ -7,14 +7,14 @@
 
 <h2>Latest Tweets (<%=@keyword.tweets.count%>)</h2>
 <ul>
-  <%@tweets.each do |twitt| %>
+  <%@twitts.each do |twitt| %>
     <li> <img src="<%=twitt.user_image_url%>" with="30%"/> <%=twitt.user_screen_name%>: <%=twitt.text%></li>
   <%end%>
 </ul>
 
 <div style="padding:20px;border:solid 1px #CCC;margin-bottom:20px">
 
-  <%will_paginate @tweets%>
+  <%=will_paginate @twitts%>
 </div>
 
 <%= link_to 'Edit', edit_keyword_path(@keyword) %> |
