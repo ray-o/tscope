@@ -12,6 +12,8 @@ gem 'newrelic_rpm'
 gem 'unicorn'
 gem 'rack-timeout'
 gem 'will_paginate'
+gem 'carrierwave', '~> 0.11.2'
+gem 'fog'
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'
 # Use Uglifier as compressor for JavaScript assets
