@@ -3,23 +3,27 @@
 <h2>Listing Keywords</h2>
 
 <table>
-  <thead>
-    <tr>
-      <th>Word</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
+    <thead>
+        <tr>
+            <th>Image</th>
+            <th>Word</th>
+            <th>Tweets</th>
+            <th colspan="3"></th>
+        </tr>
+    </thead>
 
-  <tbody>
-    <% @keywords.each do |keyword| %>
-      <tr>
-        <td><%= keyword.word%></td>
-        <td><%= link_to 'Show', keyword %></td>
-        <td><%= link_to 'Edit', edit_keyword_path(keyword) %></td>
-        <td><%= link_to 'Destroy', keyword, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
+    <tbody>
+        <% @keywords.each do |keyword| %>
+        <tr>
+            <td><%= image_tag(keyword.image.thumb.url) if keyword.image? %></td>
+            <td><%= keyword.word%></td>
+            <td><%= keyword.tweets.count%></td>
+            <td><%= link_to 'Show', keyword %></td>
+            <td><%= link_to 'Edit', edit_keyword_path(keyword) %></td>
+            <td><%= link_to 'Destroy', keyword, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        </tr>
+        <% end %>
+    </tbody>
 </table>
 
 <br>

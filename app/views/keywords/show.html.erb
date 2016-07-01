@@ -1,21 +1,23 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Word:</strong>
-  <%= @keyword.word %>
-</p>
+<%= image_tag(@keyword.image.thumb.url) if @keyword.image? %>
+<h1><%= @keyword.word %></h1>
 
 <h2>Latest Tweets (<%=@keyword.tweets.count%>)</h2>
 <ul>
-  <%@twitts.each do |twitt| %>
-    <li> <img src="<%=twitt.user_image_url%>" with="30%"/> <%=twitt.user_screen_name%>: <%=twitt.text%></li>
-  <%end%>
+    <%@twitts.each do |twitt| %>
+    <li>
+        <img src="<%=twitt.user_image_url%>" with="30%"/>
+        <%=twitt.user_screen_name%>:
+        <%=twitt.text%></li>
+    <%end%>
 </ul>
 
 <div style="padding:20px;border:solid 1px #CCC;margin-bottom:20px">
 
-  <%=will_paginate @twitts%>
+    <%=will_paginate @twitts%>
 </div>
 
-<%= link_to 'Edit', edit_keyword_path(@keyword) %> |
+<%= link_to 'Edit', edit_keyword_path(@keyword) %>
+|
 <%= link_to 'Back', keywords_path %>
