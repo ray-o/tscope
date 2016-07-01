@@ -1,17 +1,40 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <title>Tweetscope</title>
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
-  <%= csrf_meta_tags %>
-</head>
-<body>
-<h1>Tweetscope - v1</h1>
-<hr>
-<%= yield %>
+    <head>
+        <title>Tweetscope</title>
+        <%= stylesheet_link_tag    'application', media: 'all' %>
+        <%= javascript_include_tag 'application' %>
+        <%= csrf_meta_tags %>
+    </head>
+    <body>
+        <nav class="navbar navbar-default" role="navigation" style="padding:10px">
+            <div class="navbar-left">
+                <h4 class="text-muted">Tweetscope</h4>
+            </div>
+            <div class="navbar-right">
+                <div style="float:right;">
+                    <ul class="nav nav-pills pull-right">
+                        <li class="active">
+                            <a href="#">Home</a>
+                        </li>
+                        <li>
+                            <a href="#">Contact</a>
+                        </li>
+                        <li>
+                            <a href="#">Login</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <div class="content">
+        <%= yield %>
+    </div>
 
-<hr>
-<div style="text-align:center">Tweetscope - for Heroku course</div>
+    <div class="footer">
+        Tweetscope - for Heroku course
+    </div>
+
 </body>
 </html>
